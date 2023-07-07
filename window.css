@@ -1,0 +1,11 @@
+#the-stack {
+    border: 1px solid blue;
+}
+
+picture {
+    border: 1px solid red;
+}
+
+#placeholder {
+    -gtk-icon-size: 100px;
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkWindow" id="window">
+    <property name="width-request">1000</property>
+    <property name="height-request">1000</property>
+    <property name="child">
+      <object class="GtkBox">
+        <property name="vexpand">1</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkOverlay">
+            <property name="vexpand">1</property>
+            <property name="hexpand">1</property>
+            <property name="child">
+              <object class="GtkPicture" id="main"/>
+            </property>
+            <child type="overlay">
+              <object class="GtkStack" id="stack">
+                <property name="name">the-stack</property>
+                <property name="height-request">200</property>
+                <property name="width-request">200</property>
+                <property name="valign">start</property>
+                <property name="halign">start</property>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name">placeholder</property>
+                    <property name="child">
+                      <object class="GtkBox">
+                        <property name="height-request">200</property>
+                        <property name="width-request">200</property>
+                        <child>
+                          <object class="GtkImage" id="placeholder">
+                            <property name="hexpand">1</property>
+                            <property name="name">placeholder</property>
+                            <property name="icon-name">dialog-question-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name">thumbnail</property>
+                    <property name="child">
+                      <object class="GtkBox">
+                        <property name="height-request">200</property>
+                        <property name="width-request">200</property>
+                        <child>
+                          <object class="GtkPicture" id="thumbnail">
+                            <property name="content-fit">scale-down</property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <child>
+              <object class="GtkButton" id="show-placeholder">
+                <property name="label">Show placeholder</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="show-thumbnail">
+                <property name="label">Show thumbnail</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="start-pipelines">
+                <property name="label">Start pipelines</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+  </object>
+</interface>
